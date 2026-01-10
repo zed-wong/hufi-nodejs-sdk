@@ -1,0 +1,35 @@
+{
+  "name": "hufi-sdk",
+  "version": "0.1.0",
+  "description": "Node.js SDK for Hufi Recording Oracle API",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist --target node && tsc --emitDeclarationOnly --declaration --outDir ./dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "hufi",
+    "oracle",
+    "recording-oracle",
+    "sdk"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "^1.3.5",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "ethers": "^6.16.0"
+  }
+}
