@@ -1,13 +1,11 @@
-# hufi-sdk
+# hufi-nodejs-sdk
 
 Node.js SDK for the Hufi APIs (Recording Oracle and Campaign Launcher).
 
 ## Installation
 
 ```bash
-bun add hufi-sdk
-# or
-npm install hufi-sdk
+bun add hufi-nodejs-sdk
 ```
 
 ## Usage
@@ -15,7 +13,7 @@ npm install hufi-sdk
 ### Initialize the client
 
 ```typescript
-import { HufiClient } from 'hufi-sdk';
+import { HufiClient } from 'hufi-nodejs-sdk';
 
 const client = new HufiClient({
   recordingOracleUrl: 'https://ro.hu.finance', // optional, this is the default
@@ -181,7 +179,7 @@ await admin.triggerCronJob({ job_id: 'progress_recording' });
 ### Error Handling
 
 ```typescript
-import { HufiClient, HufiError } from 'hufi-sdk';
+import { HufiClient, HufiError } from 'hufi-nodejs-sdk';
 
 try {
   await client.campaigns.join({ chain_id: 137, address: '0x...' });

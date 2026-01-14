@@ -1,7 +1,7 @@
 {
-  "name": "hufi-sdk",
+  "name": "hufi-nodejs-sdk",
   "version": "0.1.0",
-  "description": "Node.js SDK for Hufi Recording Oracle API",
+  "description": "Node.js SDK for Hufi APIs (Recording Oracle, Campaign Launcher)",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,9 @@
   ],
   "scripts": {
     "build": "bun build ./src/index.ts --outdir ./dist --target node && tsc --emitDeclarationOnly --declaration --outDir ./dist",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "ci": "bun run typecheck && bun test && bun run build"
   },
   "keywords": [
     "hufi",
